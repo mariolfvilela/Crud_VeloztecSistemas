@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Veloztec</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+</head>
+
+<body ng-app="fupApp">
+    <div class="container" ng-controller="fupController as ctrl">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">Veloztec</li>
+            </ol>
+        </nav>
+        <div class="card mb-3">
+            <div class="card-header">
+                Cadastro
+            </div>
+            <div class="card-body">
+                <form name="frm" novalidate ng-submit="gravar()">
+                    <div class="row">
+                        <div class="form-group col-xs-12 col-md-6 col-lg-3">
+                            <label for="nome">Nome*</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Nome*" required ng-model="ctrl.indicadorModel.Nome">
+                        </div>
+                        <div class="form-group col-xs-12 col-md-6 col-lg-3">
+                            <label for="dataIntegracao">Data Integracao*</label>
+                            <input type="text" class="form-control" id="dataIntegracao" placeholder="Data Integracao*" required ng-model="ctrl.indicadorModel.DataIntegracao">
+                        </div>
+                        <div class="form-group col-xs-12 col-md-6 col-lg-3">
+                            <label for="dataUltAlteracao">DataUl tAlteracao*</label>
+                            <input type="text" class="form-control" id="dataUltAlteracao" placeholder="DataUl tAlteracao*" required ng-model="ctrl.indicadorModel.DtaUltAlteracao">
+                        </div>
+                        <div class="form-group col-xs-12 col-md-6 col-lg-3">
+                            <label for="formulaCalculo">Formula Calculo*</label>
+                            <input type="text" class="form-control" id="formulaCalculo" placeholder="Formula Calculo*" required ng-model="ctrl.indicadorModel.FormulaCalculo">
+                        </div>
+                        <div class="form-group col-xs-12 col-md-6 col-lg-3">
+                            <label for="idDrgIntegracao">Drg Integracao*</label>
+                            <input type="text" class="form-control" id="idDrgIntegracao" placeholder="Drg Integracao*" required ng-model="ctrl.indicadorModel.IdDrgIntegracao">
+                        </div>
+                        <div class="form-group col-xs-12 col-md-6 col-lg-3">
+                            <label for="identDirecaoSeta">Ident Direcao Seta*</label>
+                            <input type="text" class="form-control" id="identDirecaoSeta" placeholder="Ident Direcao Seta*" required ng-model="ctrl.indicadorModel.IdentDirecaoSeta">
+                        </div>
+                        <div class="form-group col-xs-12 col-md-6 col-lg-3">
+                            <label for="identPeriodicidade">Ident Periodi Cidade*</label>
+                            <input type="text" class="form-control" id="identPeriodicidade" placeholder="Ident Periodi Cidade*" required ng-model="ctrl.indicadorModel.IdentPeriodicidade">
+                        </div>
+                        <div class="form-group col-xs-12 col-md-6 col-lg-3">
+                            <label for="identReferencial">Ident Referencial*</label>
+                            <input type="text" class="form-control" id="identReferencial" placeholder="Ident Referencial*" required ng-model="ctrl.indicadorModel.IdentReferencial">
+                        </div>
+                        <div class="form-group col-xs-12 col-md-6 col-lg-3">
+                            <label for="informacoesAdicionais">Informacoes Adicionais*</label>
+                            <input type="text" class="form-control" id="informacoesAdicionais" placeholder="Informacoes Adicionais*" required ng-model="ctrl.indicadorModel.InformacoesAdicionais">
+                        </div>
+                        <div class="form-group col-xs-12 col-md-6 col-lg-3">
+                            <label for="numDecimais">Num Decimais*</label>
+                            <input type="text" class="form-control" id="numDecimais" placeholder="Num Decimais*" required ng-model="ctrl.indicadorModel.NumDecimais">
+                        </div>
+                        <div class="form-group col-xs-12 col-md-6 col-lg-3">
+                            <label for="objetivo">Objetivo*</label>
+                            <input type="text" class="form-control" id="objetivo" placeholder="Objetivo*" required ng-model="ctrl.indicadorModel.Objetivo">
+                        </div>
+                        <div class="form-group col-xs-12 col-md-6 col-lg-3">
+                            <label for="unidade">Unidade*</label>
+                            <input type="text" class="form-control" id="unidade" placeholder="Unidade*" required ng-model="ctrl.indicadorModel.Unidade">
+                        </div>
+                        <div class="form-group col-xs-12 col-md-6 col-lg-3">
+                            <label for="versao">Versao*</label>
+                            <input type="text" class="form-control" id="versao" placeholder="Versao*" required ng-model="ctrl.indicadorModel.Versao">
+                        </div>
+                        <div class="form-group col-xs-12 col-md-6 col-lg-3">
+                            <label for="usuarioUltAlteracao">Usuariolt Alteracao*</label>
+                            <input type="text" class="form-control" id="usuarioUltAlteracao" placeholder="Usuariolt Alteracao*" required ng-model="ctrl.indicadorModel.UsuarioUltAlteracao">
+                        </div>
+                    </div>
+                    <!--Submit-->
+                    <div class="form-group">
+                        <div class="col-xs-12 p-0 text-xs-left" ng-show="!ctrl.indicadorModel.Id">
+                            <button type="submit" class="btn btn-primary" title="Gravar" ng-disabled=" ctrl.indicadorModel.Id > 0 || (loading || (frm.$submitted && !frm.$valid))">Gravar</button>
+                        </div>
+                        <div class="col-xs-12 p-0 text-xs-left" ng-show="!!ctrl.indicadorModel.Id">
+                                <button type="button" class="btn btn-secondary" title="Novo"
+                                ng-click="ctrl.indicadorModel = {};" 
+                                ng-disabled="(loading || (frm.$submitted && !frm.$valid))">Novo</button>
+                            </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-header">
+                Lista
+            </div>
+            <div class="card-body">
+                <div class="table-responsive" ng-style="{'height': (window.innerHeight - 100) + 'px'}">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col">#</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">dataIntegracao</th>
+                                <th scope="col">dataUltAlteracao</th>
+                                <th scope="col">formulaCalculo</th>
+                                <th scope="col">idDrgIntegracao</th>
+                                <th scope="col">identDirecaoSeta</th>
+                                <th scope="col">identPeriodicidade</th>
+                                <th scope="col">identReferencial</th>
+                                <th scope="col">informacoesAdicionais</th>
+                                <th scope="col">numDecimais</th>
+                                <th scope="col">objetivo</th>
+                                <th scope="col">unidade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="indicador in indicadores | orderBy: nome">
+                                <td>
+                                    <button type="button" class="btn btn-danger" ng-click="deleteIndicadorPorId(indicador.Id)">Delete</button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-info" ng-click="getIndicadorePorId(indicador.Id)">Selecionar</button>
+                                </td>
+                                <th scope="row">{{indicador.Id}}</th>
+                                <td>{{indicador.Nome}}</td>
+                                <td>{{indicador.DataIntegracao}}</td>
+                                <td>{{indicador.DataUltAlteracao}}</td>
+                                <td>{{indicador.FormulaCalculo}}</td>
+                                <td>{{indicador.IdDrgIntegracao}}</td>
+                                <td>{{indicador.IdentDirecaoSeta}}</td>
+                                <td>{{indicador.IdentPeriodicidade}}</td>
+                                <td>{{indicador.IdentReferencial}}</td>
+                                <td>{{indicador.InformacoesAdicionais}}</td>
+                                <td>{{indicador.NumDecimais}}</td>
+                                <td>{{indicador.Objetivo}}</td>
+                                <td>{{indicador.Unidade}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    angular.module('fupApp', [])
+        .controller('fupController', ['$scope', '$http', '$filter', '$window', function ($scope, $http, $filter, $window) {
+            var vm = this;
+            vm.construct = function () {
+                vm.defaults();
+                $scope.getIndicadores();
+            };
+            // gravar
+            $scope.gravar = function () {
+                //https://localhost:44381
+                //http://localhost:50294
+                var url = 'http://localhost:50294/api/indicador/save';
+                $http({
+                    method: 'POST',
+                    url: url,
+                    data: vm.indicadorModel,
+                    headers: { 'Content-Type': 'application/json' }
+                }).
+                    then(function (response) {
+                        vm.status = response.status;
+                        $scope.indicadores.push(response.data);
+                    }, function (response) {
+                        $scope.data = response.data || 'Request failed';
+                        vm.status = response.status;
+                    });
+            };
+            // get indicador por id
+            $scope.getIndicadorePorId = function (id) {
+                //https://localhost:44381
+                //http://localhost:50294
+                var url = 'http://localhost:50294/api/indicador/' + id;
+                $http({
+                    method: 'GET',
+                    url: url,
+                    headers: { 'Content-Type': undefined }
+                }).
+                    then(function (response) {
+                        vm.status = response.status;
+                        vm.indicadorModel = response.data;
+                    }, function (response) {
+                        $scope.data = response.data || 'Request failed';
+                        vm.status = response.status;
+                    });
+            };
+            // get lista de indicadores
+            $scope.getIndicadores = function () {
+                //https://localhost:44381
+                //http://localhost:50294
+                var url = 'http://localhost:50294/api/indicador/all';
+                $http({
+                    method: 'GET',
+                    url: url,
+                    headers: { 'Content-Type': undefined }
+                }).
+                    then(function (response) {
+                        vm.status = response.status;
+                        $scope.indicadores = response.data;
+                    }, function (response) {
+                        $scope.data = response.data || 'Request failed';
+                        vm.status = response.status;
+                    });
+            }
+            // delete um indicadore
+            $scope.deleteIndicadorPorId = function (id) {
+                //https://localhost:44381
+                //http://localhost:50294
+                var url = 'http://localhost:50294/api/indicador/delete/' + id;
+                $http({
+                    method: 'DELETE',
+                    url: url,
+                    headers: { 'Content-Type': undefined }
+                }).
+                    then(function (response) {
+                        vm.status = response.status;
+                        for (var i = 0; i < $scope.indicadores.length; i++) {
+                            if ($scope.indicadores[i].Id && $scope.indicadores[i].Id === id) {
+                                $scope.indicadores.splice(i, 1);
+                                break;
+                            }
+                        }
+                        $scope.indicadores.splice(id, 1);
+                        alert('Indicador deletado com sucesso!');
+                    }, function (response) {
+                        $scope.data = response.data || 'Request failed';
+                        vm.status = response.status;
+                    });
+            }
+            /* Controller --------------------------------------------------------*/
+            vm.defaults = function () {
+                $scope.indicadores = [];
+                vm.indicadorModel = {};
+                $scope.window = $window;
+            };
+            vm.construct();
+        }]);
+</script>
+
+</html>
